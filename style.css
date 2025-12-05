@@ -1,0 +1,321 @@
+:root {
+  --text-color--: #25282B;
+  --brand-color--: #FDC435;
+  --text-color-two--: #828282;
+}
+
+
+/* CSS reset start*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #F9FAFF;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color--);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  /* margin */
+}
+
+/* CSS reset end*/
+
+/*common class start*/
+
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.playfairDisplay {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+
+.btnbg {
+  background-color: var(--brand-color--);
+  border: 2px solid transparent;
+}
+
+.bannerLinkoutline {
+  border: 2px solid var(--text-color--);
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  text-align: center;
+  color: var(--text-color--);
+  position: relative;
+}
+
+.title::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--brand-color--);
+  width: 100px;
+  height: 2px;
+  border-radius: 2px;
+}
+/*common class end*/
+
+/*nav part start*/
+
+nav {
+  margin-top: 12px;
+  position: absolute;
+  width: 100%;
+}
+
+.navLogo,
+.navmenu {
+  width: 50%;
+}
+
+.navLogo image {
+  align-items: center;
+  justify-content: center;
+}
+
+.navmenu ul {
+  align-items: center;
+  justify-content: flex-end;
+  gap: 48px;
+}
+
+.navLinks {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/*nav part end*/
+
+/*Hero section start*/
+
+#banner {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding-top: 111px;
+}
+
+.bannerCondent {
+  max-width: 486px;
+  max-height: 408px;
+}
+
+.bannerCondent h4 {
+  color: var(--brand-color--);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.bannerCondent h1 {
+  font-size: 64px;
+  line-height: 120%;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.bannerCondent p {
+  line-height: 32px;
+  color: var(--text-color-two--);
+}
+
+.bannerLink {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+}
+
+/*Hero section end*/
+
+/*project section start*/
+
+#Projects{
+  margin-top: -300px;
+}
+
+.projectcard{
+  display: flex;
+  align-items: center;
+  max-width: 992px;
+  margin: auto;
+  border-radius: 24px;
+  background-color: white;
+  overflow: hidden;
+  /*box-shadow: rgb(112, 144, 176);*/
+  box-shadow: rgb(112, 144, 176, 0.1) 0px 6px 64px;
+}
+
+.projectwrapper{
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.projectcontent
+.ptojectimage{
+  width: 50%;
+
+}
+.projectittel{
+  max-width: 497px;
+  margin: auto;
+  padding-left: 51px;
+}
+.projectittel h1{
+  font-size: 40px;
+  color: var(--text-color--);
+}
+.projectittel p{
+  font-size: 18px;
+  color: var(--text-color-two--);
+  line-height: 150%;
+  margin: 24px 0px;
+}
+
+.projectcard:nth-child(even) .ptojectimage{
+  order: -1;
+}
+/*project section end*/
+/*contact section start*/
+
+#contact{
+  margin-top: 144px;
+}
+
+#contact form{
+  max-width: 400px;
+  margin: auto;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fromInput{
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--text-color--);
+  font-weight: 600;
+}
+.fromInput input, textarea{
+  font-weight: 400;
+  border-radius: 8px;
+  border: 2px solid var(--text-color-two--);
+  outline: transparent;
+  min-height: 40px;
+  padding: 0px 10px;
+  resize: vertical;
+}
+
+#contact form button{
+  max-width: 89px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+
+/*contact section end*/
+/*footer section start*/
+
+.socilaIcons{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 56px;
+}
+footer h6{
+ text-align: center;
+ margin-top: 32px;
+ font-size: 16px;
+  color: var(--text-color-two--);
+  font-weight: 400;
+}
+footer{
+  background-image: url(../public/Vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 344px;
+}
+
+
+/*footer section end*/
